@@ -1,0 +1,73 @@
+
+
+
+
+/* This is my first proper css file */
+
+body{
+    background-color: rgb(212, 167, 223);
+    max-width: 650px;
+    margin: auto;
+}
+
+.header{
+    background: black;
+    width: 100vw;
+    padding: 1px;
+    text-align: center;
+}
+
+h1, h3, p{
+    color:black;
+    font-family: 'Poppins', sans-serif;
+}
+
+.chart{
+    background-color: white;
+    width:450px;
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgb{149, 80, 156};
+}
+.button1{
+    background-color: rgb(149, 80, 156);
+    border: none;
+    padding: 15px 32px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    border-radius: 12px;
+    width: 250px;
+    margin: 20px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background-color 1s ease;
+}
+
+.button1:hover{
+    background-color: rgb(212, 167, 223);
+}    
+
+.button2{
+    background-color: rgb(149, 80, 156);
+    border: none;
+    padding: 15px 32px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    border-radius: 12px;
+    width: 150px;
+    margin: 20px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background-color 1s ease;
+}
+
+.button2:hover{
+    background-color: rgb(212, 167, 223);
+} 
