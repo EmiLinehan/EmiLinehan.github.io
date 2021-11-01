@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<!-- ///////////////////  HEAD //////////////////////////////////// -->
+
+<head>
+
+<!--The next three lines allow the Vega embed-->
+<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+  
+<title>Emelia's Portfolio</title>
+  
+<link rel="stylesheet" href="index.css">
+  
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+</style>  
+
+</head>
+
+<!-- /////////////////// END HEAD //////////////////////////////////// -->
+
+
+
+<!-- ///////////////////  START BODY //////////////////////////////////// -->
+
+<body>
+<h1>Portfolio</h1>
+
+  <p> This section contains the data visualisations I constructed as part of the homeworks our class were set</p>  
+
+  <h2> Week 2 </h2>
+
+<!--Chart 1 -->
+<div class="chart" id="chart1">
+    <script>
+      var myChart1 = "chart1_covidUKRegions.json";
+      vegaEmbed('#chart1', myChart1);
+    </script>
+</div>
+
+<p> This graph takes data from the rapid charts website and shows how COVID cases changed in different regions of the UK over time.
+    It uses a stacked graph to visualise this. </p>
+
+
+<!--Chart 2 -->
+<div class="chart" id="chart2">
+  <script>
+    var myChart2 = "chart2_ukProductivity.json";
+    vegaEmbed('#chart2', myChart2);
+  </script>
+</div>
+
+<p> Here, the chart displays the trend in productivity over time in the UK </p>
+
+<!--Chart 3 -->
+<div class="chart" id="chart3">
+  <script>
+    var myChart3 = "chart3_environment.json";
+    vegaEmbed('#chart3', myChart3);
+  </script>
+</div>
+
+<p> The third visualisation protrays the level of CO2 emissins in tonnes for Brazil, China, the UK, the US, India </p>
+
+<h2>Week 3</h2>
+
+<!--Chart 4 -->
+<div class="chart" id="chart4">
+  <script>
+    var myChart4 = "Chart4_CovidRegionsBBS.json";
+    vegaEmbed('#chart4', myChart4);
+  </script>
+</div>
+
+<!--Chart 5 -->
+<div class="chart" id="chart5">
+  <script>
+    var myChart5 = "Chart5_CovidRegionsLPP.json";
+    vegaEmbed('#chart5', myChart5);
+  </script>
+</div>
+
+<p> These graphs represent the number of new covid cases per day withinin different regions of the UK.
+ The first uses data sourced from a government API, and the second contains raw data only.
+</p>
+
+<h2>Week 4</h2>
+
+<!--Chart 6 -->
+<div class="chart" id="chart6">
+  <script>
+    var myChart6 = "Chart6_Covid_data_Basingstoke.json";
+    vegaEmbed('#chart6', myChart6);
+  </script>
+</div>
+<p>
+  This visualisation contains data of daily chnages in COVID cases in my home town of Basingstoke. I constructed this from in-line data which I wrote 
+</p>
+
+
+<!--Chart 7 -->
+<div class="chart" id="chart7">
+  <script>
+    var myChart7 = "Chart7_FrancePopulation2015-2020.json";
+    vegaEmbed('#chart7', myChart7);
+  </script>
+  </div>
+<p> To create this chart I downloaded data from the OECD containing the yearly population of france beween 2016-2020. I added in manually the population in 2015 </p>
+<h2>Week 5</h2>
+
+<h2>Week 6</h2>
+
+<p> Here, I generated an API loop using Google Colab, which enabled me to upload the data to Github and create these four visulaisations  </p>
+
+<!--Chart 10 -->
+<div class="chart" id="chart10">
+  <script>
+    var myChart5 = "Chart10_UK:U.S._Foreign_Exchnage_Rate.json";
+    vegaEmbed('#chart10', myChart10);
+  </script>
+  </div>
+
+<!--Chart 11 -->
+<div class="chart" id="chart11">
+  <script>
+    var myChart5 = "Chart_11_U.S.:Euro_Foreign_Exchnage_Rate.json";
+    vegaEmbed('#chart11', myChart11);
+  </script>
+  </div>
+
+<!--Chart 12 -->
+<div class="chart" id="chart12">
+  <script>
+    var myChart5 = "Chart12_Japan:U.S._Foreign_Exchange_Rate.json";
+    vegaEmbed('#chart12', myChart12);
+  </script>
+  </div>
+  
+<!--Chart 13 -->
+<div class="chart" id="chart13">
+  <script>
+    var myChart5 = "Chart13_China:U.S._Foreign_Exchnage_Rate.json";
+    vegaEmbed('#chart13', myChart13);
+  </script>
+</div>
+
+
+</body>
+<!-- ///////////////////  END BODY //////////////////////////////////// -->
+
+</html>
