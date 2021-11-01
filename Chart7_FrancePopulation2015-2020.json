@@ -1,0 +1,65 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",     "title": {
+        "text": "Population of France Between 2015-2020 (Millions)",
+        "subtitle":"Source: OECD",
+        "subtitleFontStyle":"italic",
+        "subtitleFontSize":10,
+        "anchor": "start",
+        "color": "black"
+      },
+      
+       "data": {
+        "url": "https://raw.githubusercontent.com/EmiLinehan/EmiLinehan.github.io/main/PopulationDataArgentiaChart.csv",
+        "format": {"type": "csv"}
+      },
+    
+       "transform":[
+          
+          {"filter": {
+            "field": "LOCATION", 
+            "oneOf": ["FRA"]}
+            }
+    
+    
+        ],
+      
+      
+      "height": 300,
+      "width": 310,
+      "mark": {
+      "type": "line",
+      "color": "#286fccde",
+      "strokeWidth": 2,
+      "opacity": 1
+      },
+       
+      "mark": {"type": "line", "point": true},
+     
+      "encoding": {
+    
+        "x": {
+          "field": "TIME",
+          "type": "temporal",
+          "title": null,
+          "axis": {"grid": false}
+        },
+    
+        "y": {
+          "field": "Value",
+          "type": "quantitative",
+          "title": null,
+          "scale": {"domain": [66.4, 68]},
+          "axis": {"grid": false}
+        },
+    
+        "color": {
+          "field": "LOCATION",
+          "type": "nominal",
+          "scale": {"scheme": "set1"},
+          "title": "LEGEND TITLE",
+          "legend": {
+            "orient": "top-left", 
+            "fillColor": "#FcFdFd"}
+        }
+    }
+    }
