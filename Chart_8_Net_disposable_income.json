@@ -1,0 +1,43 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+    "data": {
+       "url": "https://api.allorigins.win/raw?url=https://api.ons.gov.uk/timeseries/CRYF/dataset/bb/data",
+       "format": {
+           "type":"json",
+           "property": "years"}},
+
+
+    "title": {
+        "text": "Households: Adjusted net disposable income, per head UK",
+        "subtitle": "Chained volume measure £: Seasonally adjusted, ONS",
+        "subtitleFontStyle":"italic",
+        "subtitleFontSize":10,
+        "anchor": "start",
+        "color": "black"},
+
+    "width":300,
+    "height":300,
+
+    "mark":{
+        "type": "line",
+        "color":"#990099",
+        "strokeWidth":2,
+        "opacity":1},
+ 
+ "encoding": {
+    "x": {
+        "field": "date",
+        "type": "temporal",
+        "title": null,
+        "axis": {"grid": false}
+      },
+  
+    "y": {
+        "field": "value",
+        "type": "quantitative",
+        "title": null,
+        "axis": {"grid": false}
+      }
+}
+}

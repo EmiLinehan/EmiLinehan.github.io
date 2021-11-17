@@ -1,0 +1,46 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+      "description": "Police Crime chart",
+  
+      "title": {
+       "text": "Level of crime in Basingstoke Town Centre",
+       "anchor": "start",
+       "color": "black",
+       "subtitle":"Offences committed in September 2021. Source: Police API.",
+       "subtitleFontStyle":"italic",
+       "subtitleFontSize":10,
+       "subtitleColor":"black"
+    },
+   
+    "data": {"url": "https://data.police.uk/api/crimes-street/all-crime?lat=51.26775&lng=-1.08834&date=2021-09"},
+
+    
+  
+    "transform": [
+      {"calculate":"1", "as":"crime"}
+    ],
+  
+    "width":285,
+    "height":300,
+      
+    "mark": {
+      "type": "bar"},
+         
+    
+      
+     "encoding": {
+     "x": {
+      "aggregate": "sum",
+        "field": "crime", 
+        "type": "quantitative"},
+
+      "y": {
+       "field": "category", 
+        "type": "nominal",
+        "scale":{"scheme":"tableau20"},
+        "legend":{
+          "title":null}
+}
+}
+}
