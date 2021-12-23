@@ -1,0 +1,53 @@
+,Plant_Species_and_variety,Treatment,Pot_Number,Pod_number,Pod_weight_grams,Bean_number,Bean_weight_grams,Average_ Pod_weight_grams,Average Bean Weight Milligrams
+0,Bean Black Turtle,High ozone heated,1,25.0,19.01,111.0,14.325999999999999,0.7604,129.0630631
+1,Bean Black Turtle,High ozone heated,2,20.0,13.399000000000001,88.0,9.974,0.66995,113.3409091
+2,Bean Black Turtle,High ozone heated,3,7.0,4.938,28.0,3.764,0.7054285709999999,134.4285714
+3,Bean Pinto,High ozone heated,1,11.0,8.538,27.0,6.391,0.776181818,236.7037037
+4,Bean Pinto,High ozone heated,2,6.0,5.055,19.0,4.056,0.8425,213.47368419999998
+5,Bean Pinto,High ozone heated,3,17.0,9.533,29.0,7.3,0.5607647060000001,251.72413790000002
+6,Bean Cannellini,High ozone heated,1,17.0,14.49,41.0,9.662,0.8523529409999999,235.6585366
+7,Bean Cannellini,High ozone heated,2,6.0,4.473,11.0,3.2239999999999998,0.7455,293.0909091
+8,Bean Cannellini,High ozone heated,3,10.0,5.695,18.0,3.802,0.5695,211.2222222
+10,Cowpea Black Eye,High ozone heated,1,16.0,18.802,75.0,14.85,1.175125,198.0
+11,Cowpea Black Eye,High ozone heated,2,8.0,14.050999999999998,54.0,11.488,1.756375,212.74074069999998
+12,Cowpea Black Eye,High ozone heated,3,6.0,8.635,39.0,6.854,1.4391666669999998,175.7435897
+13,Cowpea Black Eye,High ozone heated,4,5.0,7.357,29.0,5.956,1.4714,205.37931030000001
+14,Bean Orca,High ozone heated,1,8.0,6.577999999999999,16.0,4.502,0.82225,281.375
+15,Bean Orca,High ozone heated,2,9.0,9.97,25.0,7.315,1.107777778,292.6
+16,Bean Orca,High ozone heated,3,9.0,7.046,18.0,4.956,0.7828888890000001,275.3333333
+17,Bean Orca,High ozone heated,4,5.0,3.3080000000000003,19.0,2.396,0.6616,126.1052632
+18,Bean Black Turtle,Low ozone heated,1,22.0,36.66,111.0,25.236,1.666363636,227.3513514
+19,Bean Black Turtle,Low ozone heated,2,27.0,27.537,149.0,18.956,1.019888889,127.2214765
+20,Bean Black Turtle,Low ozone heated,3,22.0,22.912,101.0,15.776,1.041454545,156.1980198
+21,Bean Black Turtle,Low ozone heated,4,7.0,9.376,24.0,5.607,1.339428571,233.625
+22,Bean Pinto,Low ozone heated,1,23.0,38.664,50.0,26.826999999999998,1.681043478,536.54
+23,Bean Pinto,Low ozone heated,2,26.0,48.806999999999995,51.0,26.116,1.8771923080000001,512.0784313999999
+24,Bean Pinto,Low ozone heated,3,23.0,29.113000000000003,45.0,19.436,1.2657826090000002,431.9111111
+25,Bean Cannellini,Low ozone heated,1,24.0,18.628,44.0,13.72,0.776166667,311.8181818
+26,Bean Cannellini,Low ozone heated,2,3.0,3.688,6.0,1.6480000000000001,1.229333333,274.6666667
+29,Cowpea Black Eye,Low ozone heated,1,9.0,16.455,71.0,13.283,1.8283333330000002,187.084507
+30,Cowpea Black Eye,Low ozone heated,2,11.0,16.039,70.0,12.029000000000002,1.458090909,171.8428571
+32,Cowpea Black Eye,Low ozone heated,4,5.0,2.8280000000000003,9.0,1.666,0.5656,185.11111110000002
+33,Bean Orca,Low ozone heated,1,31.0,26.541,61.0,15.977,0.85616129,261.91803280000005
+34,Bean Orca,Low ozone heated,2,27.0,16.587,43.0,8.674,0.6143333329999999,201.7209302
+35,Bean Orca,Low ozone heated,3,12.0,9.585,20.0,4.803999999999999,0.79875,240.2
+36,Bean Orca,Low ozone heated,4,8.0,9.78,20.0,6.477,1.2225,323.85
+37,Bean Black Turtle,Medium ozone heated,1,40.0,32.211999999999996,172.0,22.025,0.8053,128.05232560000002
+38,Bean Black Turtle,Medium ozone heated,2,15.0,11.634,70.0,8.349,0.7756,119.27142859999998
+39,Bean Black Turtle,Medium ozone heated,3,4.0,4.086,21.0,2.885,1.0215,137.38095239999998
+40,Bean Black Turtle,Medium ozone heated,4,3.0,2.281,9.0,1.788,0.760333333,198.66666669999998
+41,Bean Pinto,Medium ozone heated,1,9.0,19.672,24.0,11.202,2.1857777780000003,466.75
+42,Bean Pinto,Medium ozone heated,2,13.0,12.296,26.0,8.99,0.945846154,345.7692308
+43,Bean Pinto,Medium ozone heated,3,10.0,13.704,31.0,10.625,1.3704,342.7419355
+44,Bean Pinto,Medium ozone heated,4,9.0,14.011,26.0,10.269,1.556777778,394.96153849999996
+45,Bean Cannellini,Medium ozone heated,1,21.0,36.092,72.0,25.816,1.718666667,358.55555560000005
+46,Bean Cannellini,Medium ozone heated,2,6.0,5.379,14.0,2.685,0.8965,191.78571430000002
+47,Bean Cannellini,Medium ozone heated,3,22.0,20.984,46.0,15.937999999999999,0.953818182,346.47826089999995
+48,Bean Cannellini,Medium ozone heated,4,4.0,3.37,10.0,2.546,0.8425,254.6
+49,Cowpea Black Eye,Medium ozone heated,1,10.0,17.298,59.0,13.562000000000001,1.7298,229.86440679999998
+50,Cowpea Black Eye,Medium ozone heated,2,12.0,23.003,113.0,18.76,1.916916667,166.0176991
+52,Cowpea Black Eye,Medium ozone heated,4,5.0,5.912999999999999,21.0,4.809,1.1826,229.0
+53,Bean Orca,Medium ozone heated,1,14.0,10.184,20.0,6.267,0.7274285709999999,313.35
+54,Bean Orca,Medium ozone heated,2,22.0,14.741,24.0,8.997,0.670045455,374.875
+55,Bean Orca,Medium ozone heated,3,20.0,15.136,31.0,9.202,0.7568,296.8387097
+56,Bean Orca,Medium ozone heated,4,10.0,8.235,16.0,5.445,0.8235,340.3125
