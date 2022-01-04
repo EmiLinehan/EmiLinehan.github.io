@@ -1,10 +1,10 @@
-,Plant_Species_and_variety,Treatment,Average bean number,Average bean weight grams
-0,Bean_Orca,Low_ozone_heated,12.6,2.714
-5,Bean_Orca,Medium_ozone_heated,8.0,1.7375
-9,Bean_Orca,High_ozone_heated,2.8,0.5539999999999999
-14,Bean_Pinto,Low_ozone_heated,4.6,1.5419999999999998
-19,Bean_Pinto,Medium_ozone_heated,4.5,1.5225
-23,Bean_Pinto,High_ozone_heated,3.333333333,0.943333333
-26,Bean_Turtle,Low_ozone_heated,28.0,3.3475
-31,Bean_Turtle,Medium_ozone_heated,8.0,0.998
-36,Bean_Turtle,High_ozone_heated,9.666666667000001,1.3075
+,Plant Species and variety,Treatment,Average bean number,Average bean weight grams
+0,Orca Bean,Low Ozone,12.6,2.714
+5,Orca Bean,Medium Ozone,8.0,1.7375
+9,Orca Bean,High Ozone,2.8,0.5539999999999999
+14,Pinto Bean,Low Ozone,4.6,1.5419999999999998
+19,Pinto Bean,Medium Ozone_heated,4.5,1.5225
+23,Pinto Bean,High Ozone,3.333333333,0.943333333
+26,Turtle Bean,Low Ozone,28.0,3.3475
+31,Turtle Bean,Medium Ozone,8.0,0.998
+36,Turtle Bean,High Ozone,9.666666667000001,1.3075
