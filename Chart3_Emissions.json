@@ -1,0 +1,84 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+
+  "layer": [
+      
+    {"data": {"url": "https://api.eia.gov/series/?api_key=JV2WdtIzoYc8hMDi9PX2cA5EAwSCnqdzyoZn42jV&out&series_id=INTL.4008-8-CHN-MMTCD.A",
+      "format":{"type":"json","property":"series"}},
+      "mark": {"type":"line", "opacity": 1},
+      "transform": [{"flatten":["data"],"as":["dataArray"]}]
+      
+    },
+
+
+    {"data": {"url": "https://api.eia.gov/series/?api_key=JV2WdtIzoYc8hMDi9PX2cA5EAwSCnqdzyoZn42jV&out&series_id=INTL.4008-8-IND-MMTCD.A",
+      "format":{"type":"json","property":"series"}},
+      "mark": {"type":"line"},
+     "transform": [{"flatten":["data"],"as":["dataArray"]}]
+    },
+
+    {"data": {"url": "https://api.eia.gov/series/?api_key=JV2WdtIzoYc8hMDi9PX2cA5EAwSCnqdzyoZn42jV&out&series_id=INTL.4008-8-GBR-MMTCD.A",
+      "format":{"type":"json","property":"series"}},
+      "mark": {"type":"line"},
+      "transform": [{"flatten":["data"],"as":["dataArray"]}]
+    },
+      
+    {"data": {"url": "https://api.eia.gov/series/?api_key=JV2WdtIzoYc8hMDi9PX2cA5EAwSCnqdzyoZn42jV&out&series_id=INTL.4008-8-GBR-MMTCD.A",
+      "format":{"type":"json","property":"series"}},
+      "mark": {"type":"line"},
+      "transform": [{"flatten":["data"],"as":["dataArray"]}]
+    },
+
+    {"data": {"url": "https://api.eia.gov/series/?api_key=JV2WdtIzoYc8hMDi9PX2cA5EAwSCnqdzyoZn42jV&out&series_id=INTL.4008-8-JPN-MMTCD.A",
+      "format":{"type":"json","property":"series"}},
+      "mark": {"type":"line"},
+      "transform": [{"flatten":["data"],"as":["dataArray"]}]
+    },
+
+    {"data": {"url": "https://api.eia.gov/series/?api_key=JV2WdtIzoYc8hMDi9PX2cA5EAwSCnqdzyoZn42jV&out&series_id=INTL.4008-8-IRN-MMTCD.A",
+      "format":{"type":"json","property":"series"}},
+      "mark": {"type":"line"},
+      "transform": [{"flatten":["data"],"as":["dataArray"]}]
+    }
+  ],
+
+  "title": {
+    "text": "CO2 emissions (total)",
+    "subtitle":"Total CO2 emissions by country (Million metric tonnes). Source: eia",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+
+
+    "height":300,
+    "width":270,
+
+    
+  "encoding": {
+    "x": {"field": "dataArray[0]", "type": "temporal", "title": "Year"},
+
+    "y": {"field": "dataArray[1]", "type": "quantitative", "title": "Emissios (Million Metric Tons)"},
+    "color": {"field": "geography", "type": "nominal", "scale": {"scheme": "set2"}, "title": null, "legend": {"orient": "bottom"}},
+
+    "tooltip": [
+      {
+        "field": "dataArray[0]",
+        "type": "temporal",
+        "title": "Year"
+      },
+      {
+        "field": "dataArray[1]",
+        "type": "quantitative",
+        "title": "CO2 emissions"
+      },
+      {
+        "field": "geography",
+        "type": "nominal",
+        "title": "Country"
+      }
+    ]
+  }
+}

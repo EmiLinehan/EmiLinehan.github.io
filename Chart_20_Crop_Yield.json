@@ -1,0 +1,106 @@
+{ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+    "description": "The cumulative avergae weight of 3 types of beans depending on varying inensities of Ozone",
+  
+    "title": {
+      "text": "Avergae weight of beans by ozone exposure",
+      "subtitle":["Wight of beans in grams (g). Source: Enviromnetal Information data Centre"],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+  
+    "data": {
+      "url": "https://raw.githubusercontent.com/EmiLinehan/EmiLinehan.github.io/main/Biomass_and_Yield.csv",
+      "format":{"type":"csv"}},
+
+     "params": [
+        {
+         "name": "highlight",
+         "select": {"type": "point", "on": "mouseover"}
+        },
+        {"name": "select", "select": "point"}
+     ],
+  
+
+    "mark": {
+        "type":"bar",
+        "size":10,
+        "color":"rgb(0,67,167)",
+        "opacity":0.5,
+        "stroke": "black",
+        "cursor": "pointer"
+    },
+    
+    "height": 300,
+    "width": "container",
+  
+    "encoding": {
+      "x": {
+        "field": "Treatment", 
+        "type": "ordinal",
+        "sort": "-y",
+        "title":"Ozone Intensity"},
+  
+      "y": {
+        "field": "Average bean weight grams", 
+        "type": "quantitative",
+        "title":"Weight (g)"},
+  
+      "color": {
+        "field": "Plant Species and variety", 
+        "type": "ordinal",
+        "scale": {"scheme": "set3"},
+        "legend": {"orient":"bottom"},
+        "title":null
+     },
+
+     "fillOpacity": {
+        "condition": {"param": "select", "value": 1},
+        "value": 0.3},
+              
+              
+     "tooltip": [
+        {
+         "field": "Average bean weight grams",
+         "type": "quantitative",
+         "title": "Average bean weight (g)"
+        },
+        {
+         "field": "Average bean number",
+         "type": "quantitative",
+         "title": "Average bean number"
+        },
+        {
+         "field": "Plant Species and variety",
+         "type": "nominal",
+         "title": "Bean"
+        }
+     ],
+
+         "strokeWidth": {
+            "condition": [
+            {
+            "param": "select",
+            "empty": false,
+            "value": 2
+            },
+          {   
+            "param": "highlight",
+            "empty": false,
+            "value": 1
+            }
+            ],
+            "value": 0
+        }
+   },
+    "config": {
+     "scale": {
+     "bandPaddingInner": 0.2
+    }
+      
+      
+     
+    }
+}
