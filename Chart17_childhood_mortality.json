@@ -1,0 +1,56 @@
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ 
+  "title": {
+     "text": "Childhood Mortality by Type of Disease in Brazil",
+     "subtitle":"Source: Our World in Data.",
+     "subtitleFontStyle":"italic",
+     "subtitleFontSize":10,
+     "anchor": "start",
+     "color": "black"
+   },
+ 
+ 
+   "description": "Cause of childhood mortality  from the 5 most lethal diseases.",
+ 
+   "data": {
+     "url": "https://raw.githubusercontent.com/EmiLinehan/EmiLinehan.github.io/main/childhood_deaths.csv",
+     "format": {"type": "csv"}
+   },
+   
+     "height": 300,
+   "width": 300,
+   
+   "mark": {"type": "area", "point": false},
+   
+   "selection": {
+     "Cause of Death": {"type": "multi", "fields": ["Cause of Death"], "bind": "legend"}
+   },
+     
+   "encoding": {
+     "x": {
+       "field": "Year", 
+       "type": "temporal", 
+       "title": null, 
+       "axis":{"grid":false}
+       },
+ 
+     "y": {
+       "field": "Deaths",
+       "type": "quantitative",
+       "title": null,
+       "axis":{"grid":false}
+       },
+ 
+     "color": {
+       "field": "Cause of Death",
+       "type": "nominal",
+       "scale": {"scheme": "blues"},
+       "title": null,
+       "legend": {
+         "orient": "bottom",
+         "columns":2, 
+         "fillColor": "#FcFdFd"}
+     },
+     "opacity": {"condition": {"selection": "Cause of Death", "value": 1}, "value": 0.1}        
+   }
+ }
