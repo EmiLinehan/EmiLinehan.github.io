@@ -1,0 +1,100 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "description": "",
+
+    "title": {
+    "text": "Death Rate per Country from outside air pollution",
+    "subtitle": "Death rate per 100,000, Age standardised. Source: Our World In Data",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {"url": "https://raw.githubusercontent.com/EmiLinehan/EmiLinehan.github.io/main/Death_Rate1.csv"},
+
+  "params": [
+    {
+      "name": "highlight",
+      "select": {"type": "point", "on": "mouseover"}
+    },
+    {"name": "select", "select": "point"}
+  ],
+  
+
+    "mark":{
+      "type": "circle",
+      "color":"dodgerblue",
+      "opacity":0.5,
+    "stroke": "black",
+    "cursor": "pointer"
+    },
+
+
+    "width":300,
+    "height":300,
+
+
+    "encoding": {
+      
+      "x": {
+        "field": "Death Rate 1990", 
+        "type": "quantitative",
+        "title":"Death Rate 1990"
+     },
+  
+      "y": {
+        "field": "Death rate 2017", 
+        "type": "quantitative",
+        "title":"Death rate 2017"
+        },
+        "fillOpacity": {
+      "condition": {"param": "select", "value": 1},
+      "value": 0.3},
+
+       "size": {
+        "field": "Population 2017 (historical estimates)", 
+        "type": "quantitative",
+        "title":"Population",
+        "scale": { "range": [10, 500]}},
+
+              "tooltip": [
+            {
+                "field": "Death Rate 1990",
+                "type": "quantitative",
+                "title": "DR 1990"
+            },
+            {
+                "field": "Death rate 2017",
+                "type": "quantitative",
+                "title": "DR 2017"
+            },
+              {
+                "field": "Country",
+                "type": "nominal",
+                "title": "Country"
+            }
+            ],
+           "strokeWidth": {
+             "condition": [{
+                "param": "select",
+                "empty": false,
+                "value": 2
+             },
+            {
+            "param": "highlight",
+            "empty": false,
+             "value": 1
+            }
+             ],
+      "value": 0
+            }
+    },
+    "config": {
+    "scale": {
+    "bandPaddingInner": 0.2
+     }
+  
+
+    } 
+}

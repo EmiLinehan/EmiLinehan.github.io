@@ -1,0 +1,49 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "The nuber of Premature deaths caused by pollution as a percentage of total premature deaths, mapped alongside the Welfare cost of premature deaths as a percentage of GDP equivalent",
+    "title": {
+        "text": "Premature Deaths due to Pollution and Consequent Welfare Cost by Country",
+        "subtitle": "Source: OECD ",
+        "subtitleFontStyle": "italic",
+        "subtitleFontSize": 10,
+        "anchor": "start",
+        "color": "black"
+    },
+   
+
+  "data": {"url": "https://raw.githubusercontent.com/EmiLinehan/EmiLinehan.github.io/main/data_welfare_loss1.csv"},
+  "mark": "point",
+  "height": {"step": 12},
+  "encoding": {
+    "facet": {
+      "field": "Country",
+      "type": "ordinal",
+      "columns": 2
+     
+        },
+
+        "x": {
+            "field": "Year",
+            "type": "temporal"
+      
+        },
+        "y": {
+            "field": "Value",
+            "type": "quantitative",
+            "title": "Percentage"
+      
+         },
+        "color": {
+            "field": "Variable", 
+            "type": "ordinal",
+            "scale": {"scheme": "set2"},
+            "legend": {"orient":"bottom"},
+            "title":null
+        },
+  
+        "tooltip":[
+            {"field":"Year", "title":"Year", "type": "temporal", "format":"%Y"},
+            {"field":"Value", "title":"Percentage"}
+        ]
+    }
+}
