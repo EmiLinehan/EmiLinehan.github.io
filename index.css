@@ -1,0 +1,157 @@
+
+/* This is my first proper css file */
+
+body{
+    background-color: #cce6ff;
+    max-width: 650px;
+    margin: auto;
+}
+
+
+
+.header{
+    background:#cce6ff;
+    border:solid, black;
+    padding: 1px;
+    text-align:center;
+    width: 450px;
+}
+
+h1{
+    color:black;
+    text-align:center;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 80px;}
+
+h2, h3, p{
+    color:black;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+}
+h4{
+    color:black;
+    text-align:centre;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 50px;} 
+p{
+    color:rgb(17, 17, 17);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+.title{
+    background-color: transparent;
+    text-align: center;
+    margin: 20px 0px;
+}
+
+
+.chart{
+    background-color: white;
+    width:450px;
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: black;
+}
+.button1{
+    background-color:#366AA2;
+    border: solid;
+    border-color: black;
+    padding: 10px 20px;
+    color: white;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    border-radius: 12px;
+    width: 170px;
+    margin: 40px;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    transition: background-color 1s ease;
+}
+
+.button1:hover{
+    background-color: #cce6ff;
+}    
+
+.button2{
+    background-color:#366AA2;
+    border: solid;
+    border-color: black;
+    padding: 5px 12px;
+    color: white;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 150px;
+    max-width: 100px;
+    margin: 1px 2px 1px 2px;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    transition: background-color 1s ease;
+}
+
+
+.button2:hover{
+    background-color:#cce6ff;
+} 
+
+.container{
+    background-color: transparent;
+    text-align: center;
+    margin: 5px 0px 5px 0px;
+    width: 650px;
+}   
+
+
+.container1{
+    background-color: transparent;
+    text-align: center;
+    margin: 5px 5px;
+    width: 650px;
+}  
+.buttoncontainer{
+    text-align: center;
+    align-items: flex-start;
+    display: inline-block;
+    width: 650px;
+    background-color: transparent;
+    margin: auto;
+} 
+
+/* for screens between 390 to 430 px */
+@media screen and (max-width: 430px) and (min-width: 390px) {
+    .vega-embed.has-actions {
+        width: 360px;
+    }
+}
+
+/* for screens 389 px and below*/
+@media screen and (max-width: 389px) {
+    .vega-embed.has-actions {
+        width: 340px;
+    }
+}
+
+/* for screens 450 px and below */
+@media screen and (max-width: 450px) {
+    h1{
+        font-size: 40px;
+    } 
+  
+    h2{
+        font-size: 25px;
+    } 
+  
+    h3{
+        font-size: 15px;
+    } 
+    p{
+        font-size: 17px;
+    }
+}
