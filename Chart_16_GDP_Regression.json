@@ -1,0 +1,66 @@
+{
+  "data": {
+    "url": "https://raw.githubusercontent.com/EmiLinehan/EmiLinehan.github.io/main/regression%20data.csv"
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "point",
+        "filled": true
+      },
+      "encoding": {
+        "x": {
+          "field": "Growth of Exports (%)",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "GDP growth (%)",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "firebrick"
+      },
+      "transform": [
+        {
+          "regression": "GDP growth (%)",
+          "on": "Growth of Exports (%)"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "Growth of Exports (%)",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "GDP growth (%)",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "regression": "GDP growth (%)",
+          "on": "Growth of Exports (%)",
+          "params": true
+        },
+        {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
+      ],
+      "mark": {
+        "type": "text",
+        "color": "firebrick",
+        "x": "width",
+        "align": "right",
+        "y": -5
+      },
+      "encoding": {
+        "text": {"type": "nominal", "field": "R2"}
+      }
+
+    }
+  ]
+}
