@@ -1,0 +1,55 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+
+    "title": {
+    "text": "World annual CO2 emissions",
+    "subtitle": "Source: Our World In data",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+
+
+    "width":300,
+    "height":300,
+
+
+      "data": {
+        "name":"myData",
+        "url": "https://raw.githubusercontent.com/EmiLinehan/EmiLinehan.github.io/main/data_World_emissions.csv",
+        "format": {
+          "type":"csv",
+          "property": "years"
+        }},
+  
+
+
+    "mark":{
+      "type": "line",
+      "color":"#00BFFF",
+      "strokeWidth":2,
+      "opacity":1
+    },
+
+
+    "encoding": {
+      
+      "x": {
+        "field": "Year",
+        "type": "temporal",
+        "title":null
+        },
+  
+      "y": {
+        "field": "Annual CO2 emissions",                
+        "type": "quantitative",
+        "title":null,
+        "scale":{
+          "domain":{
+            "data": "myData", 
+            "field": "Annual CO2 emissions"}}
+        }
+  }
+}
