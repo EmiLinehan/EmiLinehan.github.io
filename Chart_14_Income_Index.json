@@ -1,0 +1,52 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "data": {
+     "url": "https://raw.githubusercontent.com/EmiLinehan/EmiLinehan.github.io/main/my_data_income_index.csv",
+     "format": {
+         "type":"csv",
+         "property": "observations"}},
+
+
+  "title": {
+      "text": "Set of countries and their Income Index",
+      "subtitle": "Source: Wikipedia",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"},
+
+  "width":400,
+  "height":300,
+
+  "mark":{
+      "type": "bar",
+      "color":"#990099",
+
+      "strokeWidth":2,
+      "opacity":1},
+
+
+   "encoding": {
+  "x": {
+    "field": "Country",
+    "type": "nominal",
+    "sort":[],
+    "axis": {
+      "title": "Country",
+      "grid": false,
+      "labelSeparation": 20,
+      "ticks": false
+    }
+  },
+  
+"y": {
+    "field": "Inequality-adjusted income index",
+    "type": "quantitative",
+    "title": "",
+    "axis": {"grid": false},
+    "sort": [],
+    "scale": {"domain": [0, 1]}
+  }
+}
+}
