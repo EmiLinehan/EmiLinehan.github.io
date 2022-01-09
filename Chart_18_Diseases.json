@@ -1,0 +1,76 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+    "text": "Hopsitalisations avoided in London after pollution reducing policy introduced",
+    "subtitle":["Policy includes expansion of the Ultra Low Emission Zone. Source: Greater London Authority"],
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "subtitlePadding":5,
+    "anchor": "start",
+    "color": "black"
+  },
+  
+  "width": "300", 
+  "height": 300,
+  
+  "data": {"url": "https://raw.githubusercontent.com/EmiLinehan/EmiLinehan.github.io/main/Hospitalisations_avoided.csv"},
+
+  "transform": [
+      {"filter": {"selection": "DiseaseType"}},
+      {
+       "filter": {
+        "field": "Scenario",
+        "oneOf": ["1"]
+        }
+     }
+  ],
+
+"selection": {
+    "DiseaseType": {
+      "type": "single",
+      "init": {"Disease": "chronic obstructive pulmonary disease"},
+      "fields": ["Disease"],
+      "bind": {
+        "input": "select",
+        "options": [
+          "chronic obstructive pulmonary disease",
+          "childhood asthma",
+          "coronary heart disease",
+          "lung cancer",
+          "stroke"        
+        ],
+        "name": "Disease Type:"
+      }
+    }
+  },
+  
+ 
+  "mark": {
+    "type":"line",
+    "orient":"vertical",
+    "opacity": 1
+    
+  },
+  
+  "encoding": {  
+    "x": {
+      "field": "Year",
+      "type": "temporal",
+      "title": "Year"
+    },
+    "y": {
+      "field": "Hospitalisations Avoided",
+      "type": "quantitative",
+      "title":"Hospitalisations Avoided"
+    },
+    "color": {
+      "field": "AgeGroup",
+      "type": "nominal",
+      "scale": {"scheme": "blues"},
+      "title": null,
+      "legend": {"orient": "bottom"}
+      
+   }
+  }
+}
