@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<head>
+
+<!--The next three lines allow the Vega embed-->
+<script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.2"></script>
+
+
+<title>Emelia's Project</title>
+
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+
+<link rel="stylesheet" href="project.css">
+  
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+</style>  
+
+</head>
+
+<body>
+
+<div class="container">     
+  <h1>Data <span style="color:#366AA2E6">Science</span></h1>
+  <h4>Project</h4>
+</div>
+
+<div class="buttoncontainer">
+<div class="buttonDiv1">    
+    <button class="button2" onclick="window.location.href = 'index'" >Home</button>
+</div> 
+<div class="buttonDiv2">    
+    <button class="button2" onclick="window.location.href = 'portfolio'" >Portfolio</button>
+</div> 
+</div>
+<!--to this -->
+
+<p> This section of my website is dedicated to my Data Science Project</p>
+
+<h2>Does pollution have a negative impact on Economic Growth?</h2>
+
+
+<div class="title">
+  <h2>Aims</h2>
+  <p>The aim of my project is to decipher the impact that air pollution has on Economic Growth.  My study focuses on 3 core ways pollution could do this, via crop yields, labour productivity and health expenditure.</p>
+  <p> If I can show higher pollution can cause health issues, or even death, this will impact productivity, due to time off work and potentially losses in their ability to complete tasks efficiently. This will in turn affect healthcare expenditure, especially if this involves hospital stays and further treatment. During my research I found that ground level ozone can have a negative impact on crop yields, as it oxidises the plant tissue. </p>
+  <p>Overall I created 7 charts to investigate whether the data aligns with my theory.</p>
+</div>
+
+<div class="title">
+  <h2>Chart 1</h2>
+</div>
+
+<!--Chart 19 -->
+<div class="containergraph">
+  <div class="chart" id="chart19">
+    <script>
+      var myChart19 = "Chart_19_Hospitalisations_Avoided.json";
+      vegaEmbed('#chart19', myChart19);
+    </script>
+  </div>
+</div>
+
+<div class="title">
+  <h2>Chart 2</h2>
+</div>
+
+<!--Chart 20 -->
+<div class="containergraph">
+  <div class="chart" id="chart20">
+    <script>
+      var myChart20 = "Chart_20_Crop_Yield.json";
+      vegaEmbed('#chart20', myChart20);
+    </script>
+  </div>
+</div>
+
+<div class="title">
+  <h2>Chart 3</h2>
+</div>
+
+<!--Chart 21 -->
+<div class="containergraph">
+    <div class="chart" id="chart21">
+    <script>
+      var myChart21 = "Chart_21_Emissions.json";
+      vegaEmbed('#chart21', myChart21);
+    </script>
+  </div>
+</div>
+
+<div class="title">
+  <h2>Chart 4</h2>
+</div>
+
+<!--Chart 22 -->
+<div class="containergraph">
+  <div class="chart2" id="chart22">
+    <script>
+      var myChart22 = "Chart_22_Prem_Death_Welfare_Loss.json";
+      vegaEmbed('#chart22', myChart22);
+    </script>
+  </div>
+</div>
+
+<div class="title">
+  <h2>Chart 5</h2>
+</div>
+
+<!--Chart 23 -->
+<div class="containergraph">
+  <div class="chart" id="chart23">
+    <script>
+      var myChart23 = "Chart_23_Death_Rate_By_Country.json";
+      vegaEmbed('#chart23', myChart23);
+    </script>
+  </div>
+</div>
+
+<div class="title">
+  <h2>Chart 6</h2>
+</div>
+
+<!--Chart 24 -->
+<div class="containergraph">
+  <div class="chart" id="chart24">
+    <script>
+      var myChart24 = "Chart_24_DALYs_map.json";
+      vegaEmbed('#chart24', myChart24);
+    </script>
+  </div>
+</div>
+
+<div class="title">
+  <h2>Chart 7</h2>
+</div>
+
+<!--Chart 25 -->
+<div class="containergraph">
+  <div class="chart" id="chart25">
+  <script>
+    var myChart25 = "Chart_25_World_Emissions.json";
+    vegaEmbed('#chart25', myChart25);
+  </script>
+  </div>
+</div>
+
+<div class="title">
+<h2>Data</h2>
+
+<p>The data I used was collected from numerous sources. I downloaded much of the data in csv format, specifically from the Greater London Authority (Chart 1), the Environmental Information data centre (Chart 2), Our world in Data (Charts 5 and 7), and lastly, OECD (Charts 4 and 6). Many of these graphs use the same countries for consistency.   </p>
+
+<p>Chart 3 uses an API running from eia. I wanted to show a variety of countries on this chart however this would involve layering API’s containing data from countries individually, which can be seen in the code.</p>
+
+
+
+<h2>Data Cleaning</h2>
+
+<p>For Chart 1, I had to decide upon which scenario my data would follow. I chose scenario 3, as this shows what the strongest policy can achieve in reduced hospitalisations, to be considered a ‘best case scenario’.</p>
+
+<p> An issue I faced when dealing with the data in Chart 2 was that the sample was small, and that as the data was not showing the effect of ozone in a time series, which I was aiming for. As there were 4 replicates per plant and intensity, I used to excel to create an average weight and number for each bean. </p>
+  
+<p> The main issue I had when coding Chart 3 was, that the data from the API came in an array format, which meant I could not code for the chart as if it were in long form. Therefore, I had to use the flatten command, which turns each array into a data object. As well, the USA data I planned to use began 30 years earlier than the rest of the data. Because this had on skewing the chart, I made the decision to leave this out of my chart.</p>
+  
+<p>Charts 4, 5 and 6 required cleaning, which I used Google Colab to do this. Additionally for Chart 5, I used Google Colab to create a regression graph, which will enable me to see whether the overall trend shows death rates are increasing at an increasing or decreasing rate, and whether this aligns with the rate of emissions.</p>
+  
+<p>Finally, Chart 6’s country names for particular areas did not match to those of the topojson, so I changed these manually in excel </p>
+</div>
+
+<div class="buttoncontainer">
+    <p align="center">
+      <a class="button2" href="https://colab.research.google.com/drive/1kK-5YBYvWtZUqBjngrXUN9e6WYA-BnJU"> Colab Chart 2</a>
+      <a class="button2" href="https://colab.research.google.com/drive/1lfP_Jrm80-hZEdjCs28YpNGqHCWTnkEh"> Colab Chart 4</a> 
+      <a class="button2" href="https://colab.research.google.com/drive/1v7rRElGv8zoLz6YCMBpxKOzUiikOS155"> Colab Chart 5</a> 
+      <a class="button2" href="https://colab.research.google.com/drive/1fl5r5Nm7hPmC_1UGWvQCYo7iNxj_YYQ2"> Colab Chart 6</a> 
+    </p> 
+</div>
+
+<div class="title">
+<h2>Conclusion</h2>
+
+<p>To conclude, I am satisfied that most of my charts point towards the fact higher pollution has a negative effect on the factors contributing to economic growth. However, the wealth and healthcare systems available in the country strongly influences how severely this impact is observed. </p>
+
+<p>Chart 2 shows average wight of beans is over 2 times higher for the Low Ozone compared to high Ozone, as well as the number of beans. I do hold reservations on the strength of the inference however due to lack of sample size. </p>
+
+<p>Additionally, Chart 1 shows that implementing policy which reduces pollution has a large potential to reduce hospitalizations, upwards of 1600 in a year, which not only reduces the healthcare costs imposed on society, but will improve productivity, enabling people to work longer in better health. </p>
+
+<p>In Colab I show that the slope takes a value of 0.52, inferring that the death rate from pollution is slowing an extra death in 1990 corresponds to 0.52 deaths in 2017. This doesn’t align with the fact emissions have risen considerably since 1990, shown in Chart 7. However, healthcare has improved considerably since 1990, which plays a large roll in this. </p>
+
+<p>Nevertheless, Chart 4 shows premature deaths caused by pollution as a % of all premature deaths is still high, around 12%.</p>
+
+<p>The death rate was higher in 2017 for some places, namely India and Pakistan, for which India has seen rising CO2 emissions since 1980, as showing in chart 3. </p>
+
+<p>This is reciprocated by Chart 4, showing India is experiencing increasing rates of welfare loss and premature death, meanwhile other countries whose emissions have levelled do not see these increases in welfare cost.</p>
+
+<p>Chart 6 shows that the DALY’s are much higher for countries with greater emissions, however poorer countries seem to be more disproportionately affected, which suggests that a wealthier country is likely to have a greater healthcare system, and consequently fewer years lost due to pollution.</p>
+
+</div>
+
+</body>
+
+</html>
